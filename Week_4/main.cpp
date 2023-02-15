@@ -44,6 +44,7 @@ void thatDangThrower()
 	int a= 10;
 
 	if (a = 5){
+	throw std::runtime_error("oh noes");
 	}
 
 }
@@ -61,4 +62,22 @@ void g()
 void h()
 {
 	thatDangThrower();
+}
+
+void naughtyPointers()
+{
+
+	int* p1 = nullptr;
+
+	p1 = new int;
+	(*p1) = 5;
+	cout << p1 << endl;
+	cout << (*p1) << endl;
+
+	delete p1;
+
+	(*p1) = 1000;
+	cout << (*p1) << endl;
+
+	return;
 }
